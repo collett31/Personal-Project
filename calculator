@@ -1,0 +1,74 @@
+#include <iostream>
+#include <math.h> 
+using namespace std;
+int main()
+{
+const int PI=3.14159265;
+double X, Y;
+double resultPow, resultSin, resultCos;
+char userChoice;
+
+cout << "**********************************" << endl;
+cout << "* SELECTIONS *" << endl;
+cout << "* 1 - Add *" << endl;
+cout << "* 2 - Subtract *" << endl;
+cout << "* 3 - Multiply *" << endl;
+cout << "* 4 - Divide *" << endl;
+cout << "* 5 - Raise X to the power Y *" << endl;
+cout << "* 6 - Sine ( X ) *" << endl;
+cout << "* 7 - Cosine ( X ) *" << endl;
+cout << "* *" << endl;
+cout << "* 0 - Quit *" << endl;
+cout << "**********************************" << endl;
+
+cout << "\n Enter First Number : ";
+cin >> X;
+cout << "\n Enter SELECTION number Please: ";
+cin >> userChoice;
+if(userChoice!=0)
+{
+resultSin = sin (X*PI/180);
+resultCos = cos (X*PI/180);
+switch(userChoice)
+{
+case '1':
+cout << "\n Enter Second Number : ";
+cin >> Y;
+cout << "\n The Result is " << " =  " << (X + Y) << endl;
+break;
+
+case '2':
+cout << "\n Enter Second Number : ";
+cin >> Y;
+cout << "\n The Result is " << "=  " << (X - Y) << endl;
+break;
+
+case '3':
+cout << "\n Enter Second Number : ";
+cin >> Y;
+cout << "\n The Result is " << "=  " << (X * Y) << endl;
+break;
+
+case '4':
+cout << "\n Enter Second Number : ";
+cin >> Y;
+cout << "\n The Result is " << "= " << (X / Y) << endl;
+break;
+
+case '5':
+cout << "\n Enter Second Number : ";
+cin >> Y;
+resultPow = pow (X,Y); 
+cout << "\n Answer = " << resultPow << endl;
+break;
+
+case '6':
+cout << "\n Answer = " << resultSin << endl;
+break;
+case '7':
+cout << "\n Answer = " << resultCos << endl;
+break;
+}
+}
+return 0;
+}
